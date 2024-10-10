@@ -1,0 +1,16 @@
+.input{
+    width: 90%;
+    padding: 1rem 0;
+    padding-left: 10px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: var(--white);
+    max-width: 350px;
+    border-radius: 12px;
+}
+.input::placeholder{
+    color: var(--slate);
+}
+.input:focus{
+    outline: none;
+}
