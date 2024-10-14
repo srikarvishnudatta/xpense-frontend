@@ -8,7 +8,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
 import  useAuth  from '../context/AuthContext'
 const LandingPage = () => {
-  const {data, mutate, isSuccess} = useMutation({mutationFn: createNewUser})
+  const {data, mutate, isSuccess, isPending} = useMutation({mutationFn: createNewUser})
   const {setId} = useAuth()
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const LandingPage = () => {
     <section className={styles.landingpage}>
       <div className={styles.main}>
       <h1>
-        Welcome to Xpense
+        Welcome to Splits
       </h1>
       <p>
         Tired of ads and pay walls to split expenses?
@@ -34,12 +34,12 @@ const LandingPage = () => {
       </p>
       <div>
         <form className={styles.loginform} onSubmit={handleSubmit}>
-          <Input type='text' placeholder='example@gmail.com' onChange={setEmail} value={email}/>
-          <Button text='Get started'/>
+          <Input type='text' placeholder='Example@gmail.com' onChange={setEmail} value={email}/>
+          <Button text={isPending ? 'Please wait' : 'Get Started'} disabled={isPending}/>
         </form>
       </div>
       </div>
-    </section>
+    </section> 
   )
 }
 

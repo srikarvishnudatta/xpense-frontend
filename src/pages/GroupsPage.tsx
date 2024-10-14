@@ -3,6 +3,8 @@ import { fetchUserGroups } from "../http"
 import useAuth from "../context/AuthContext"
 import { GroupType } from "../types";
 import styles from "./GroupsPage.module.css"
+import Group from "../components/Group";
+import Button from "../components/Button";
 // render all groups here
 function GroupsPage() {
   const {userId}= useAuth();
@@ -17,7 +19,8 @@ if (isError) {
 }
   return (
     <section className={styles.grouppage}>
-        <h1>Welcome back!</h1>
+        <h2>Welcome back!</h2>
+        <Button text={"New Group"} disabled={false} />
     </section>
   )
 }

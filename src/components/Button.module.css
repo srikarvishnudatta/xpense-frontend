@@ -8,3 +8,6 @@
     border: none;
     font-size: 0.9rem;
 }
+.button:disabled{
+    background-color: #394251;
+}

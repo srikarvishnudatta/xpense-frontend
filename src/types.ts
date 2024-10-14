@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface ButtonType{
     text:string;
+    disabled:boolean;
 }
 export interface InputType{
     type:string;
