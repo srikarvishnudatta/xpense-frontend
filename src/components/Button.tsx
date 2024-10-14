@@ -5,7 +5,7 @@ import styles from './Button.module.css'
 const Button = (props: ButtonType) => {
   return (
     <button className={styles.button}>
-        {props.text}
+        <span>{props.text}</span>
     </button>
   )
 }

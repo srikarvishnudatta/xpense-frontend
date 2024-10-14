@@ -3,7 +3,7 @@
     background-color: var(--dark-navy);
 }
 .main{
-    background-color: var(--lightest-slate);
+    background-color: white;
     width: 75%;
     position: relative;
     top: 200px;
@@ -13,7 +13,6 @@
     flex-direction: column;
     gap: 0.5rem;
     max-width: 1000px;
-    border-radius: 10px;
 }
 .loginform{
     display: flex;
