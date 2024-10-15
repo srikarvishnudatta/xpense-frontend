@@ -1,10 +1,23 @@
 .grouppage{
-    background-color: var(--dark-navy);
     height: 100vh;
     margin: 100px auto 0 auto;
-    max-width: 1250px;
+    max-width: 850px;
     padding-left: 10px;
+    padding-right: 10px;
 }
 h1{
     color: var(--green);
+}
+.searchbar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.searchbar:first-child{
+    flex: 2;
+}
+.groupdata{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
 }

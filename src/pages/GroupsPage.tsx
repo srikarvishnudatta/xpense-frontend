@@ -5,6 +5,7 @@ import { GroupType } from "../types";
 import styles from "./GroupsPage.module.css"
 import Group from "../components/Group";
 import Button from "../components/Button";
+import Input from "../components/Input";
 // render all groups here
 function GroupsPage() {
   const {userId}= useAuth();
@@ -20,7 +21,13 @@ if (isError) {
   return (
     <section className={styles.grouppage}>
         <h2>Welcome back!</h2>
+        <div className={styles.searchbar}>
+        <Input type={"text"} placeholder={"Search"} />
         <Button text={"New Group"} disabled={false} />
+        </div>
+        <div className={styles.groupdata}>
+        {!data || data.length === 0 ? <p>Such Emptiness :( </p> : data.map((group) => <Group {...group} key={group.groupId}/>)}
+        </div>
     </section>
   )
 }
