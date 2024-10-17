@@ -12,3 +12,8 @@ export async function fetchUserGroups(userId:string){
     const groups = await response.json();
     return groups
 }
+export async function fetchTransactions(groupId:string){
+    const response = await fetch(`http://localhost:8081/${groupId}/transactions`)
+    const transactions = await response.json();
+    return transactions;
+}

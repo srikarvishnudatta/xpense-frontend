@@ -3,7 +3,8 @@ import LandingPage from './pages/LandingPage'
 import GroupsPage from './pages/GroupsPage'
 const router = createBrowserRouter([
     {path:"/", element: <LandingPage />},
-    {path: "/groups", element: <GroupsPage />}
+    {path: "/groups", element: <GroupsPage />},
+    {path: "/{groupId}/transactions", element: <LandingPage />}
   ])
 const Router = () => {
   return (

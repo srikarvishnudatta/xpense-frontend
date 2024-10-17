@@ -15,3 +15,11 @@ export interface GroupType{
     name:string;
     groupMembers:string[];
 }
+export interface TransactionType {
+    paidBy: string;
+    splitAmong: {[x:string] : number};
+    transactionId: string
+    transactionName:string;
+    transactionValue: number;
+    groupId:string;
+}
